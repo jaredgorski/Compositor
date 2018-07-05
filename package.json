@@ -2,12 +2,13 @@
   "name": "compositor",
   "version": "1.0.0",
   "description": "A simple web app for compositing RGBA colors.",
-  "main": "index.js",
   "dependencies": {
     "node": "^10.5.0",
     "nodejs": "^0.0.0",
     "react": "^16.4.1",
-    "react-dom": "^16.4.1",
+    "react-dom": "^16.4.1"
+  },
+  "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-preset-react": "^6.24.1",
