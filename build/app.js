@@ -338,14 +338,27 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
 
 /***/ }),
 
+/***/ "./src/components/App.js":
+/*!*******************************!*\
+  !*** ./src/components/App.js ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Compositor_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Compositor.js */ \"./src/components/Compositor.js\");\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\n\nclass App extends React.Component {\n  render() {\n    return React.createElement(_Compositor_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"], null);\n  }\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (App);\n\n//# sourceURL=webpack:///./src/components/App.js?");
+
+/***/ }),
+
 /***/ "./src/components/Compositor.js":
 /*!**************************************!*\
   !*** ./src/components/Compositor.js ***!
   \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nclass Compositor extends React.Component {\n  render() {\n    return React.createElement(\n      'h1',\n      null,\n      'Hello, world!'\n    );\n  }\n}\n\nmodule.exports = Compositor;\n\n//# sourceURL=webpack:///./src/components/Compositor.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nclass Compositor extends React.Component {\n\n  constructor(props) {\n    super(props);\n    this.state = { value: '' };\n\n    this.handleChange = this.handleChange.bind(this);\n  }\n\n  handleFormChange(event) {\n    const target = event.target;\n    const value = target.value;\n    const name = target.name;\n\n    this.setState({\n      [name]: value\n    });\n  }\n\n  render() {\n\n    function compositeRGBA(r1, g1, b1, a1, r2, b2, g2, a2) {\n      const compositeR = Math.round(r1 * a1 * (1 - a2) + r2 * a2);\n      const compositeG = Math.round(g1 * a1 * (1 - a2) + g2 * a2);\n      const compositeB = Math.round(b1 * a1 * (1 - a2) + b2 * a2);\n\n      return [compositeR, compositeB, compositeG];\n    }\n\n    return React.createElement(\n      'div',\n      null,\n      React.createElement(\n        'h1',\n        null,\n        'Compositor'\n      ),\n      React.createElement(\n        'form',\n        { id: 'baseColorForm', className: 'base-color-form' },\n        React.createElement('input', { name: 'r1', placeholder: 'R', value: this.state.value, onChange: this.handleChange }),\n        React.createElement('input', { name: 'g1', placeholder: 'G', value: this.state.value, onChange: this.handleChange }),\n        React.createElement('input', { name: 'b1', placeholder: 'B', value: this.state.value, onChange: this.handleChange }),\n        React.createElement('input', { name: 'a1', placeholder: 'A', value: this.state.value, onChange: this.handleChange })\n      ),\n      React.createElement(\n        'form',\n        { id: 'overlayColorForm', className: 'overlay-color-form' },\n        React.createElement('input', { name: 'r2', placeholder: 'R', value: this.state.value, onChange: this.handleChange }),\n        React.createElement('input', { name: 'g2', placeholder: 'G', value: this.state.value, onChange: this.handleChange }),\n        React.createElement('input', { name: 'b2', placeholder: 'B', value: this.state.value, onChange: this.handleChange }),\n        React.createElement('input', { name: 'a2', placeholder: 'A', value: this.state.value, onChange: this.handleChange })\n      )\n    );\n  }\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Compositor);\n\n//# sourceURL=webpack:///./src/components/Compositor.js?");
 
 /***/ }),
 
@@ -353,10 +366,11 @@ eval("var React = __webpack_require__(/*! react */ \"./node_modules/react/index.
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nvar ReactDOM = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\nvar Compositor = __webpack_require__(/*! ./components/Compositor */ \"./src/components/Compositor.js\");\n\nReactDOM.render(React.createElement(Compositor, null), document.getElementById('compositor'));\n\n//# sourceURL=webpack:///./src/index.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_App__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/App */ \"./src/components/App.js\");\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nvar ReactDOM = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n\n\nReactDOM.render(React.createElement(_components_App__WEBPACK_IMPORTED_MODULE_0__[\"default\"], null), document.getElementById('app'));\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 

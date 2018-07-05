@@ -1,8 +1,8 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Compositor = require('./components/Compositor');
+import App from './components/App';
 
 ReactDOM.render(
-  <Compositor />,
-  document.getElementById('compositor')
+  <App />,
+  document.getElementById('app')
 );

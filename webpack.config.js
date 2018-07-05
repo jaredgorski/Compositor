@@ -31,7 +31,7 @@ module.exports = {
     ],
   },
   output: {
-    filename: 'compositor.js',
+    filename: 'app.js',
     path: __dirname + '/build'
   },
   plugins: [
