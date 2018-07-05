@@ -49,22 +49,58 @@ class Compositor extends React.Component {
       backgroundColor: `${this.displayComposite()}`,
     };
 
+    const cpContainerClasses = 'cp-container';
+
+    const cpHeadingClasses = 'cp-heading';
+
+    const formsWrapperClasses = 'cp-forms-wrapper';
+
+    const yieldWrapperClasses = 'cp-yield-wrapper';
+
+    const baseFormClasses = 'cp-base-form cp--inline';
+
+    const overlayFormClasses = 'cp-overlay-form cp--inline';
+
+    const inputClasses = 'cp-input cp--inline';
+
+    const yieldClasses = 'cp-input cp-yield-input cp--inline';
+
+    const formOperatorClasses = 'cp-form-operator cp--inline';
+
+    const inputLabelClasses = 'cp-input-label cp--inline';
+
     return (
-      <div id="composite-container" className="composite-container" style={containerColor}>
-        <h1>Compositor</h1>
-        <form id="baseColorForm" className="base-color-form">
-          <input name="r1" placeholder="R" type="number" value={this.state.r1} onChange={this.handleFormChange} />
-          <input name="g1" placeholder="G" type="number" value={this.state.g1} onChange={this.handleFormChange} />
-          <input name="b1" placeholder="B" type="number" value={this.state.b1} onChange={this.handleFormChange} />
-          <input name="a1" placeholder="A" type="number" value={this.state.a1} onChange={this.handleFormChange} />
-        </form>
-        <form id="overlayColorForm" className="overlay-color-form">
-          <input name="r2" placeholder="R" type="number" value={this.state.r2} onChange={this.handleFormChange} />
-          <input name="g2" placeholder="G" type="number" value={this.state.g2} onChange={this.handleFormChange} />
-          <input name="b2" placeholder="B" type="number" value={this.state.b2} onChange={this.handleFormChange} />
-          <input name="a2" placeholder="A" type="number" value={this.state.a2} onChange={this.handleFormChange} />
-        </form>
-        <input readOnly name="compositeOutput" value={this.displayComposite()} />
+      <div id="composite-container" className={cpContainerClasses} style={containerColor}>
+        <h1 className={cpHeadingClasses}>Compositor</h1>
+        <div className={formsWrapperClasses}>
+          <form id="baseColorForm" className={baseFormClasses}>
+            <span className={inputLabelClasses}>rgba(</span>
+            <input name="r1" className={inputClasses} placeholder="R" type="number" value={this.state.r1} onChange={this.handleFormChange} />
+            <span className={inputLabelClasses}>,</span>
+            <input name="g1" className={inputClasses} placeholder="G" type="number" value={this.state.g1} onChange={this.handleFormChange} />
+            <span className={inputLabelClasses}>,</span>
+            <input name="b1" className={inputClasses} placeholder="B" type="number" value={this.state.b1} onChange={this.handleFormChange} />
+            <span className={inputLabelClasses}>,</span>
+            <input name="a1" className={inputClasses} placeholder="A" type="number" value={this.state.a1} onChange={this.handleFormChange} />
+            <span className={inputLabelClasses}>)</span>
+          </form>
+          <span className={formOperatorClasses}>+</span>
+          <form id="overlayColorForm" className={overlayFormClasses}>
+            <span className={inputLabelClasses}>rgba(</span>
+            <input name="r2" className={inputClasses} placeholder="R" type="number" value={this.state.r2} onChange={this.handleFormChange} />
+            <span className={inputLabelClasses}>,</span>
+            <input name="g2" className={inputClasses} placeholder="G" type="number" value={this.state.g2} onChange={this.handleFormChange} />
+            <span className={inputLabelClasses}>,</span>
+            <input name="b2" className={inputClasses} placeholder="B" type="number" value={this.state.b2} onChange={this.handleFormChange} />
+            <span className={inputLabelClasses}>,</span>
+            <input name="a2" className={inputClasses} placeholder="A" type="number" value={this.state.a2} onChange={this.handleFormChange} />
+            <span className={inputLabelClasses}>)</span>
+          </form>
+        </div>
+        <div className={yieldWrapperClasses}>
+          <span className={formOperatorClasses}>=</span>
+          <input readOnly name="compositeOutput" className={yieldClasses} value={this.displayComposite()} />
+        </div>
       </div>
     );
   }

@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.cp-container {
+  box-sizing: border-box;
+  height: 100vh;
+  padding: 48px;
+  width: 100vw;
+}
+
+.cp-heading {
+  margin: 0 0 96px;
+}
+
+.cp-forms-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.cp-yield-wrapper {
+  margin: 48px 0 0;
+}
+
+.cp-input {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: solid black 1px;
+  box-shadow: none;
+  color: inherit;
+  font-size: 24px;
+  line-height: 30px;
+  margin: 0 3px;
+  -moz-appearance: none;
+  -o-appearance: none;
+  text-align: center;
+  -webkit-appearance: none;
+  width: 54px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.cp-yield-input {
+  width: 216px;
+  border: none;
+}
+
+.cp-input-label {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.cp-form-operator {
+  font-size: 24px;
+  line-height: 30px;
+  margin: 0 24px;
+}
+
+.cp--inline {
+  display: inline-flex;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
