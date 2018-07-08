@@ -8,4 +8,4 @@ Simple web-app for compositing RGBA colors.
 
 and
 
-`npm run start`
+`npm start`
