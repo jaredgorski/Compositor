@@ -86,12 +86,12 @@ input[type=number]::-webkit-outer-spin-button {
 
 .cp-yield-input {
   background-color: transparent;
-  width: 43.5vw;
+  width: 44vw;
   border: none;
   border-bottom: solid 1.5vw;
 
   @media (min-width: 768px) {
-    width: 38.1vh;
+    width: 38.5vh;
     border-bottom: solid 1.45vh;
   }
 }
