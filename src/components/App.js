@@ -1,10 +1,14 @@
 var React = require('react');
 import Compositor from './Compositor.js';
+import Footer from './Footer.js';
 
 class App extends React.Component {
   render () {
     return (
-      <Compositor />
+      <div>
+        <Compositor />
+        <Footer />
+      </div>
     );
   }
 }
