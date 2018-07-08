@@ -139,7 +139,7 @@ class Compositor extends React.Component {
             </form>
           </div>
           <div className={yieldWrapperClasses}>
-            <span className={formOperatorClasses}>=</span>
+            <span className={formOperatorClasses}>→</span>
             <input readOnly name="compositeOutput" className={yieldClasses} value={this.compositeRGB()} maxLength="18" />
           </div>
         </div>

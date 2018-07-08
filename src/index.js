@@ -1,6 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-import Icon from './favicon.ico';
+import Icon from './images/favicon.ico';
 import App from './components/App/';
 
 ReactDOM.render(

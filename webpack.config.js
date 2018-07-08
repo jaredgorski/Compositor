@@ -38,7 +38,8 @@ module.exports = {
         test: /\.(png|svg|jpg|gif|ico)$/,
         loader: 'file-loader',
         options: {
-          name: '[name].[ext]'
+          name: '[name].[ext]',
+          outputPath: 'images/'
         }
       }
     ],
@@ -51,7 +52,7 @@ module.exports = {
   plugins: [
     HTMLWebpackPluginConfig,
     new MiniCssExtractPlugin({
-      filename: './main.css',
+      filename: 'main.css',
     }),
   ],
 };
