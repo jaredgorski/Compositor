@@ -88,7 +88,7 @@ class Compositor extends React.Component {
 
     const cpContainerClasses = 'cp-container';
 
-    const cpHeadingClasses = 'cp-heading cp-typo-heading cp--bold';
+    const cpHeadingClasses = 'cp-heading cp-typo-heading cp--bold cp--non-selectable';
 
     const bodyWrapperClasses = 'cp-body-wrapper';
 
@@ -100,13 +100,13 @@ class Compositor extends React.Component {
 
     const overlayFormClasses = 'cp-form cp-overlay-form cp--inline';
 
-    const inputClasses = 'cp-input cp-typo-body cp--inline';
+    const inputClasses = 'cp-input cp-typo-body cp--inline cp--non-selectable';
 
     const yieldClasses = 'cp-input cp-typo-body cp-yield-input cp--inline';
 
-    const formOperatorClasses = 'cp-form-operator cp-typo-body cp--inline';
+    const formOperatorClasses = 'cp-form-operator cp-typo-body cp--inline cp--non-selectable';
 
-    const inputLabelClasses = 'cp-input-label cp-typo-body cp--inline';
+    const inputLabelClasses = 'cp-input-label cp-typo-body cp--inline cp--non-selectable';
 
     return (
       <div id="composite-container" className={cpContainerClasses} style={containerColor}>
