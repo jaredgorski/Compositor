@@ -12,15 +12,16 @@
 .cp-typo-heading {
   font-size: 10vw;
 
-  @media (min-width: 980px) {
-    font-size: 8vh;
+  @media (min-width: 768px) {
+    font-size: 10vh;
+    line-height: 10vh;
   }
 }
 
 .cp-typo-body {
   font-size: 4vw;
 
-  @media (min-width: 980px) {
-    font-size: 4vh;
+  @media (min-width: 768px) {
+    font-size: 3.5vh;
   }
 }
