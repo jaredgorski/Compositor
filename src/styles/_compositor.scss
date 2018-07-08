@@ -3,69 +3,109 @@
   padding: 0;
 }
 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0;
+}
+
 .cp-container {
   box-sizing: border-box;
-  height: 100vh;
-  padding: 48px;
+  height: calc(100vh - 18px);
+  padding: 8vw;
+  transition: 0.5s;
   width: 100vw;
+
+  @media (min-width: 980px) {
+    padding: 6vw;
+  }
 }
 
 .cp-heading {
-  margin: 0 0 96px;
+  margin: 0 0 7vh;
+  text-align: center;
+
+  @media (min-width: 980px) {
+    margin: 0 0 5vh;
+    text-align: right;
+  }
+}
+
+.cp-body-wrapper {
+  width: 68vw;
+  margin: auto;
+
+  @media (min-width: 980px) {
+    width: 92vw;
+  }
 }
 
 .cp-forms-wrapper {
   display: flex;
   flex-flow: row wrap;
+  margin: 0 0 5vh;
+
+  .cp-form-operator {
+    margin: 0 3vw 2vh;
+  }
 }
 
 .cp-yield-wrapper {
-  margin: 48px 0 0;
+  margin: 5vh 0 0;
+
+  .cp-form-operator {
+    margin: 0 3vw;
+  }
+}
+
+.cp-form {
+  margin: 0 0 3vh;
 }
 
 .cp-input {
-  appearance: none;
-  background-color: transparent;
+  background-color: rgba(225, 225, 225, 0.4);
   border: none;
-  border-bottom: solid black 1px;
   box-shadow: none;
   color: inherit;
-  font-size: 24px;
-  line-height: 30px;
-  margin: 0 3px;
+  margin: 0 0.3vw;
   -moz-appearance: none;
   -o-appearance: none;
   text-align: center;
   -webkit-appearance: none;
-  width: 54px;
+  width: 11vw;
 
   &:focus {
     outline: none;
   }
+
+  @media (min-width: 980px) {
+    width: 14vh;
+  }
 }
 
 .cp-yield-input {
-  width: 216px;
+  background-color: transparent;
+  width: 42vw;
   border: none;
+
+  @media (min-width: 980px) {
+    width: 45vh;
+  }
 }
 
-.cp-input-label {
-  font-size: 24px;
-  line-height: 30px;
-}
+.cp-footer {
+  color: #111;
+  display: flex;
+  font-size: 16px;
+  justify-content: center;
+  line-height: 18px;
 
-.cp-form-operator {
-  font-size: 24px;
-  line-height: 30px;
-  margin: 0 24px;
+  .footer-icon {
+    fill: #111;
+    margin: 0 12px 0;
+  }
 }
 
 .cp--inline {
   display: inline-flex;
-}
-
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
 }

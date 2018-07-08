@@ -1,6 +1,26 @@
 * {
-  font-family: 'Inconsolata', monospace;
-  color: #000;
+  font-family: 'Space Mono', monospace;
+  font-weight: 400;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+}
+
+.cp--bold {
+  font-weight: 700;
+}
+
+.cp-typo-heading {
+  font-size: 10vw;
+
+  @media (min-width: 980px) {
+    font-size: 8vh;
+  }
+}
+
+.cp-typo-body {
+  font-size: 4vw;
+
+  @media (min-width: 980px) {
+    font-size: 4vh;
+  }
 }
