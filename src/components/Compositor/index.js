@@ -1,4 +1,5 @@
 var React = require('react');
+import './compositor.scss';
 
 class Compositor extends React.Component {
 

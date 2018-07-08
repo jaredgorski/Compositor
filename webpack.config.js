@@ -8,7 +8,13 @@ var HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
 
 module.exports = {
   mode: 'development',
-  entry: [__dirname + '/src/index.js', __dirname + '/src/styles/main.scss'],
+  entry: [__dirname + '/src/index.js'],
+  devServer: {
+    contentBase: __dirname + "/build/",
+    inline: true,
+    host: 'localhost',
+    port: 8080,
+  },
   module: {
     rules: [
       {
@@ -28,11 +34,19 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]'
+        }
+      }
     ],
   },
   output: {
     filename: 'app.js',
-    path: __dirname + '/build'
+    path: __dirname + '/build',
+    chunkFilename: '[name].js'
   },
   plugins: [
     HTMLWebpackPluginConfig,

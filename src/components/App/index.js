@@ -1,6 +1,7 @@
 var React = require('react');
-import Compositor from './Compositor.js';
-import Footer from './Footer.js';
+import './typography.scss';
+import Compositor from '../Compositor/';
+import Footer from '../Footer/';
 
 class App extends React.Component {
   render () {

@@ -1,0 +1,7 @@
+{
+    "id": "react",
+    "port": 8080,
+    "healthCheck": {
+        "url": "localhost:8080"
+    }
+}
