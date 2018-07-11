@@ -10,18 +10,27 @@
 }
 
 .cp-typo-heading {
-  font-size: 10vw;
+  font-size: 13vw;
 
   @media (min-width: 768px) {
-    font-size: 10vh;
-    line-height: 10vh;
+    font-size: 13vh;
+    line-height: 13vh;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 6vh;
+    line-height: 6vh;
   }
 }
 
 .cp-typo-body {
-  font-size: 4vw;
+  font-size: 5.5vw;
 
   @media (min-width: 768px) {
+    font-size: 4vh;
+  }
+
+  @media (min-width: 1024px) {
     font-size: 3.5vh;
   }
 }

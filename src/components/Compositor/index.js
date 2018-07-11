@@ -89,6 +89,10 @@ class Compositor extends React.Component {
 
     const cpContainerClasses = 'cp-container';
 
+    const menuLinkAboutClasses = 'cp-menu-link cp-menu-about cp--bold';
+
+    const menuLinkCodeClasses = 'cp-menu-link cp-menu-code cp--bold';
+
     const cpHeadingClasses = 'cp-heading cp-typo-heading cp--bold cp--non-selectable';
 
     const bodyWrapperClasses = 'cp-body-wrapper';
@@ -101,9 +105,9 @@ class Compositor extends React.Component {
 
     const overlayFormClasses = 'cp-form cp-overlay-form cp--inline';
 
-    const inputClasses = 'cp-input cp-typo-body cp--inline cp--non-selectable';
+    const inputClasses = 'cp-input cp-typo-body cp--inline';
 
-    const yieldClasses = 'cp-input cp-typo-body cp-yield-input cp--inline';
+    const yieldClasses = 'cp-input cp-typo-body cp-yield-input cp--inline cp--non-selectable';
 
     const formOperatorClasses = 'cp-form-operator cp-typo-body cp--inline cp--non-selectable';
 
@@ -111,36 +115,38 @@ class Compositor extends React.Component {
 
     return (
       <div id="composite-container" className={cpContainerClasses} style={containerColor}>
-        <h1 className={cpHeadingClasses}>Compositor</h1>
+        <a className={menuLinkAboutClasses} href="#">?</a>
+        <a className={menuLinkCodeClasses} href="#">&lt;&gt;</a>
+        <h1 className={cpHeadingClasses}>compositor</h1>
         <div className={bodyWrapperClasses}>
           <div className={formsWrapperClasses}>
             <form id="baseColorForm" className={baseFormClasses}>
               <span className={inputLabelClasses}>rgba(</span>
-              <input name="r1" className={inputClasses} placeholder="R" type="number" min="0" max="255" maxLength="3" step="1" value={this.state.r1} onChange={this.handleFormChange} />
+              <input name="r1" className={inputClasses} placeholder="R" type="number" min="0" max="255" step="1" value={this.state.r1} onChange={this.handleFormChange} />
               <span className={inputLabelClasses}>,</span>
-              <input name="g1" className={inputClasses} placeholder="G" type="number" min="0" max="255" maxLength="3" step="1" value={this.state.g1} onChange={this.handleFormChange} />
+              <input name="g1" className={inputClasses} placeholder="G" type="number" min="0" max="255" step="1" value={this.state.g1} onChange={this.handleFormChange} />
               <span className={inputLabelClasses}>,</span>
-              <input name="b1" className={inputClasses} placeholder="B" type="number" min="0" max="255" maxLength="3" step="1" value={this.state.b1} onChange={this.handleFormChange} />
+              <input name="b1" className={inputClasses} placeholder="B" type="number" min="0" max="255" step="1" value={this.state.b1} onChange={this.handleFormChange} />
               <span className={inputLabelClasses}>,</span>
-              <input name="a1" className={inputClasses} placeholder="A" type="number" min="0" max="1" maxLength="5" step="0.01" value={this.state.a1} onChange={this.handleFormChange} />
+              <input name="a1" className={inputClasses} placeholder="A" type="number" min="0" max="1" step="0.01" value={this.state.a1} onChange={this.handleFormChange} />
               <span className={inputLabelClasses}>)</span>
             </form>
             <span className={formOperatorClasses}>+</span>
             <form id="overlayColorForm" className={overlayFormClasses}>
               <span className={inputLabelClasses}>rgba(</span>
-              <input name="r2" className={inputClasses} placeholder="R" type="number" min="0" max="255" maxLength="3" step="1" value={this.state.r2} onChange={this.handleFormChange} />
+              <input name="r2" className={inputClasses} placeholder="R" type="number" min="0" max="255" step="1" value={this.state.r2} onChange={this.handleFormChange} />
               <span className={inputLabelClasses}>,</span>
-              <input name="g2" className={inputClasses} placeholder="G" type="number" min="0" max="255" maxLength="3" step="1" value={this.state.g2} onChange={this.handleFormChange} />
+              <input name="g2" className={inputClasses} placeholder="G" type="number" min="0" max="255" step="1" value={this.state.g2} onChange={this.handleFormChange} />
               <span className={inputLabelClasses}>,</span>
-              <input name="b2" className={inputClasses} placeholder="B" type="number" min="0" max="255" maxLength="3" step="1" value={this.state.b2} onChange={this.handleFormChange} />
+              <input name="b2" className={inputClasses} placeholder="B" type="number" min="0" max="255" step="1" value={this.state.b2} onChange={this.handleFormChange} />
               <span className={inputLabelClasses}>,</span>
-              <input name="a2" className={inputClasses} placeholder="A" type="number" min="0" max="1" maxLength="5" step="0.01" value={this.state.a2} onChange={this.handleFormChange} />
+              <input name="a2" className={inputClasses} placeholder="A" type="number" min="0" max="1" step="0.01" value={this.state.a2} onChange={this.handleFormChange} />
               <span className={inputLabelClasses}>)</span>
             </form>
           </div>
           <div className={yieldWrapperClasses}>
             <span className={formOperatorClasses}>→</span>
-            <input readOnly name="compositeOutput" className={yieldClasses} value={this.compositeRGB()} maxLength="18" />
+            <input readOnly disabled name="compositeOutput" className={yieldClasses} value={this.compositeRGB()} />
           </div>
         </div>
       </div>

@@ -3,59 +3,95 @@
   padding: 0;
 }
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0;
+input {
+
+  &[type=number]::-webkit-inner-spin-button,
+  &[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0;
+  }
+
+  &[disabled] {
+    color: inherit;
+    opacity: 1;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    -webkit-text-fill-color: unset;
+  }
 }
 
 .cp-container {
   box-sizing: border-box;
   height: calc(100vh - 18px);
-  padding: 8vw;
+  min-height: 90vw;
+  padding: 6vw 5vw;
+  position: relative;
   transition: 0.5s;
   width: 100vw;
 
   @media (min-width: 768px) {
+    min-height: 0;
     padding: 6vw;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 4vw 6vw;
   }
 }
 
 .cp-heading {
-  margin: 0 0 7vh;
+  margin: 0 10px 7vh 0;
   text-align: center;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
+    margin: 0 0 7vh;
     text-align: right;
   }
 }
 
 .cp-body-wrapper {
-  width: 68vw;
-  margin: auto;
+  margin: 0 auto;
+  width: 88vw;
 
   @media (min-width: 768px) {
-    width: 92vw;
+    width: 84vh;
+  }
+
+  @media (min-width: 1024px) {
+    width: 88vw;
   }
 }
 
 .cp-forms-wrapper {
   display: flex;
   flex-flow: row wrap;
-  margin: 0 0 5vh;
+  margin: 0 0 2vh;
 
   .cp-form-operator {
     font-weight: 700;
-    margin: 0 3vw 2vh;
+    margin: 0 2vw 2vh;
   }
 }
 
 .cp-yield-wrapper {
-  margin: 5vh 0 0;
+  display: inline-flex;
+  margin: 5vh 5.5vw 0;
+
+  @media (min-width: 768px) {
+    margin: 5vh 6vh 0;
+  }
+
+  @media (min-width: 1024px) {
+    margin: 1vh 0 0;
+  }
 
   .cp-form-operator {
     font-weight: 700;
     margin: 0 3vw;
+
+    @media (min-width: 768px) {
+      margin: 0 6vh;
+    }
   }
 }
 
@@ -73,26 +109,78 @@ input[type=number]::-webkit-outer-spin-button {
   -o-appearance: none;
   text-align: center;
   -webkit-appearance: none;
-  width: 11vw;
+  width: 14vw;
 
   &:focus {
     outline: none;
   }
 
   @media (min-width: 768px) {
+    width: 15vh;
+  }
+
+  @media (min-width: 1024px) {
     width: 12vh;
   }
 }
 
 .cp-yield-input {
   background-color: transparent;
-  width: 44vw;
   border: none;
   border-bottom: solid 1.5vw;
+  width: 61vw;
 
   @media (min-width: 768px) {
-    width: 38.5vh;
     border-bottom: solid 1.45vh;
+    width: 44.1vh;
+  }
+
+  @media (min-width: 1024px) {
+    width: 38.6vh;
+  }
+}
+
+.cp-menu-link {
+  bottom: 30px;
+  color: inherit;
+  font-size: 30px;
+  height: 46px;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  width: 40px;
+
+  &.cp-menu-about {
+    left: 30px;
+
+    @media (min-width: 768px) {
+      left: 60px;
+    }
+  }
+
+  &.cp-menu-code {
+    left: 80px;
+
+    @media (min-width: 768px) {
+      left: 110px;
+    }
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  @media (min-width: 1024px) {
+    top: 4vw;
+  }
+}
+
+.cp--non-selectable {
+  @media (min-width: 768px) {
+    -webkit-user-select: none;       
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
 }
 

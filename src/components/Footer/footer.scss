@@ -15,10 +15,3 @@
     margin: 0 12px 0;
   }
 }
-
-.cp--non-selectable {
-  -webkit-user-select: none; /* Safari */        
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* IE10+/Edge */
-  user-select: none; /* Standard */
-}
