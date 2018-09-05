@@ -1,6 +1,7 @@
-var HTMLWebpackPlugin = require('html-webpack-plugin');
-var MiniCssExtractPlugin = require('mini-css-extract-plugin');
-var HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
   template: __dirname + '/src/index.html',
   filename: 'index.html',
   inject:   'body'
@@ -9,12 +10,6 @@ var HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
 module.exports = {
   mode: 'development',
   entry: [__dirname + '/src/index.js'],
-  devServer: {
-    contentBase: __dirname + "/build/",
-    inline: true,
-    host: 'localhost',
-    port: 8080,
-  },
   module: {
     rules: [
       {
@@ -41,18 +36,22 @@ module.exports = {
           name: '[name].[ext]',
           outputPath: 'images/'
         }
-      }
+      },
     ],
   },
   output: {
-    filename: 'app.js',
     path: __dirname + '/build',
-    chunkFilename: '[name].js'
+    filename: 'index.js',
   },
   plugins: [
     HTMLWebpackPluginConfig,
+    new CopyWebpackPlugin([
+      {
+        from: './wedeploy.json'
+      }
+    ]),
     new MiniCssExtractPlugin({
-      filename: 'main.css',
+      filename: 'commons.css',
     }),
   ],
 };
