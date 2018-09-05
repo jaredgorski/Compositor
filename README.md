@@ -1,6 +1,8 @@
 # Compositor
 Simple web-app for compositing RGBA colors.
 
+![compositor screenshot](src/images/compositor-screenshot.png "Compositor")
+
 
 ### Develop:
 
