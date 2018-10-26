@@ -17,3 +17,17 @@ then
 and
 
 `npm start`
+
+
+### Deploy on WeDeploy:
+Prerequisite: [WeDeploy CLI](https://wedeploy.com/docs/intro/using-the-command-line/)
+
+`npm run build`
+
+then
+
+`cd build`
+
+and
+
+`we deploy -p compositor`
