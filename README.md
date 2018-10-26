@@ -1,7 +1,7 @@
 # Compositor
 Simple web-app for compositing RGBA colors.
 
-Link: <a href="https://react-compositor.wedeploy.io/" target="_blank">https://react-compositor.wedeploy.io/</a>
+Link: [https://react-compositor.wedeploy.io/](https://react-compositor.wedeploy.io/)
 
 ![compositor screenshot](src/images/compositor-screenshot.png "Compositor")
 
@@ -16,7 +16,7 @@ Link: <a href="https://react-compositor.wedeploy.io/" target="_blank">https://re
 
 
 ### Deploy on WeDeploy:
-Prerequisite: <a href="https://wedeploy.com/docs/intro/using-the-command-line/" target="_blank">WeDeploy CLI</a>
+Prerequisite: [WeDeploy CLI](https://wedeploy.com/docs/intro/using-the-command-line/)
 
 `npm run build`
 
@@ -28,4 +28,4 @@ Prerequisite: <a href="https://wedeploy.com/docs/intro/using-the-command-line/" 
 ### Explanation
 This is a silly project bordering on uselessness, but fun nonetheless. Simply enter two RGBA colors you would like to composite together and enjoy the resulting RGB color as it fills the page background and displays in the yield. Click on the yield to search your new RGB color on Google.
 
-Feel free to open issues, send pull-requests, or ping the creator with insults, kudos, or questions at <a href="mailto:jaredgorski6@gmail.com" target="_blank">jaredgorski6@gmail.com</a>
+Feel free to open issues, send pull-requests, or ping the creator with insults, kudos, or questions at [jaredgorski6@gmail.com](mailto:jaredgorski6@gmail.com)
