@@ -124,10 +124,16 @@ input {
   }
 }
 
+.cp-yield-link {
+  color: inherit;
+  text-decoration: none;
+}
+
 .cp-yield-input {
   background-color: transparent;
   border: none;
   border-bottom: solid 1.5vw;
+  cursor: pointer;
   width: 61vw;
 
   @media (min-width: 768px) {

@@ -109,6 +109,8 @@ class Compositor extends React.Component {
 
     const yieldClasses = 'cp-input cp-typo-body cp-yield-input cp--inline cp--non-selectable';
 
+    const yieldLinkClasses = 'cp-yield-link';
+
     const formOperatorClasses = 'cp-form-operator cp-typo-body cp--inline cp--non-selectable';
 
     const inputLabelClasses = 'cp-input-label cp-typo-body cp--inline cp--non-selectable';
@@ -146,7 +148,9 @@ class Compositor extends React.Component {
           </div>
           <div className={yieldWrapperClasses}>
             <span className={formOperatorClasses}>→</span>
-            <input readOnly disabled name="compositeOutput" className={yieldClasses} value={this.compositeRGB()} />
+            <a className={yieldLinkClasses} href={`http://www.google.com/search?q=${this.compositeRGB()}`} target="_blank">
+              <input readOnly disabled name="compositeOutput" className={yieldClasses} value={this.compositeRGB()} />
+            </a>
           </div>
         </div>
       </div>
