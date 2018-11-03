@@ -1,10 +1,10 @@
 # Compositor
 Simple web-app for compositing RGBA colors
 
+
+![](.media/compositor-demo.gif)
+
 Link: [https://react-compositor.wedeploy.io/](https://react-compositor.wedeploy.io/)
-
-![compositor screenshot](src/images/compositor-screenshot.png "Compositor")
-
 
 ### Develop:
 
