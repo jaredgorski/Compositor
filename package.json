@@ -33,7 +33,7 @@
     "url": "git+https://github.com/jaredgorski/Compositor.git"
   },
   "author": "Jared Gorski",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/jaredgorski/Compositor/issues"
   },
