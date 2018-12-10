@@ -1,5 +1,5 @@
 # Compositor
-Simple web-app for compositing RGBA colors
+Simple web app for compositing RGBA colors
 
 
 ![](.media/compositor-demo.gif)
