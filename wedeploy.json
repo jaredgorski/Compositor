@@ -1,6 +1,0 @@
-{
-  "id": "react",
-  "healthCheck": {
-      "url": "localhost"
-  }
-}
