@@ -4,7 +4,7 @@ Simple web app for compositing RGBA colors
 
 ![](.media/compositor-demo.gif)
 
-Link: [https://react-compositor.wedeploy.io/](https://react-compositor.wedeploy.io/)
+Link: [https://compositor-k646dwomy.now.sh](https://compositor-k646dwomy.now.sh)
 
 ### Develop:
 
