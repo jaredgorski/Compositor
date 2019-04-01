@@ -4,7 +4,7 @@ Simple web app for compositing RGBA colors
 
 ![](.media/compositor-demo.gif)
 
-Link: [https://compositor-k646dwomy.now.sh](https://compositor-k646dwomy.now.sh)
+Link: https://compositor.jaredgorski6.now.sh/
 
 ### Develop:
 
